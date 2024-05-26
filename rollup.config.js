@@ -4,8 +4,13 @@ import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-css-only";
+import { basename } from "path";
+import replace from "@rollup/plugin-replace";
 
 const production = !process.env.ROLLUP_WATCH;
+
+// Define your repository name
+const repoName = 'DSC106_Penguins_Final_Project'; 
 
 function serve() {
   let server;
@@ -62,6 +67,12 @@ export default {
     }),
     commonjs(),
 
+    // Replace paths for GitHub Pages
+    replace({
+      'process.env.BASE_PATH': JSON.stringify(production ? `/${repoName}/` : '/'),
+      preventAssignment: true
+    }),
+
     // In dev mode, call `npm run start` once
     // the bundle has been generated
     !production && serve(),
@@ -77,5 +88,4 @@ export default {
   watch: {
     clearScreen: false,
   },
-  base: '/DSC106_Penguins_Final_Project/'
 };

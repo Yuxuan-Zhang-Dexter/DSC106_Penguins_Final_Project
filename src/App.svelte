@@ -8,6 +8,7 @@
   import Conclusion from "./Components/Conclusion.svelte";
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
+  const basePath = process.env.BASE_PATH || '/';
 </script>
 
 <Meta />
@@ -19,3 +20,5 @@
 <ScrollCenter />
 <Conclusion />
 <Resources />
+
+<img src={`${basePath}assets/favicon.svg`} alt="favicon">
