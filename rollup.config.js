@@ -39,12 +39,6 @@ export default {
     format: "iife",
     name: "app",
     file: "public/build/bundle.js",
-    paths: (id) => {
-      if (id.startsWith('public/')) {
-        return '/DSC106_Penguins_Final_Project/' + id;
-      }
-      return id;
-    }
   },
   plugins: [
     svelte({
@@ -83,4 +77,5 @@ export default {
   watch: {
     clearScreen: false,
   },
+  base: '/DSC106_Penguins_Final_Project/'
 };
