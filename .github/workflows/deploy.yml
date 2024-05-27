@@ -14,25 +14,20 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        uses: bahmutov/npm-install@v1
 
       - name: Build project
-        env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
         run: npm run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: public  # Ensure this matches your SvelteKit adapter output directory
+          path: ./dist
 
   deploy:
     name: Deploy
@@ -45,10 +40,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: public  # Ensure this matches your SvelteKit adapter output directory
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: public  # Ensure this matches your SvelteKit adapter output directory
+          publish_dir: ./dist
