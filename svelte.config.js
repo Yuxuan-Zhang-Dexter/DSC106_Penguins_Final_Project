@@ -1,19 +1,7 @@
-import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 
-const dev = process.argv.includes('dev');
-const base_path = process.env.BASE_PATH || '';
-
-const config = {
-  preprocess: preprocess(),
-  kit: {
-    adapter: adapter({
-      fallback: '404.html'  // Optional: You can specify a fallback for SPA routing
-    }),
-    paths: {
-      base: dev ? '' : base_path
-    }
-  }
-};
-
-export default config;
+export default {
+  // Consult https://svelte.dev/docs#compile-time-svelte-preprocess
+  // for more information about preprocessors
+  preprocess: vitePreprocess(),
+}
