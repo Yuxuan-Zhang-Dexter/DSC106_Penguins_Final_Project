@@ -4,12 +4,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-css-only";
-import { basename } from "path";
 
 const production = !process.env.ROLLUP_WATCH;
-
-// Define your repository name
-const repoName = 'DSC106_Penguins_Final_Project'; 
 
 function serve() {
   let server;
