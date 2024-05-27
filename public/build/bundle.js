@@ -46154,7 +46154,7 @@ var app = (function () {
 		return child_ctx;
 	}
 
-	// (209:8) {#each steps as text, i}
+	// (213:8) {#each steps as text, i}
 	function create_each_block$1(ctx) {
 		let div1;
 		let div0;
@@ -46165,10 +46165,10 @@ var app = (function () {
 				div1 = element("div");
 				div0 = element("div");
 				attr_dev(div0, "class", "step-content svelte-zoq0r5");
-				add_location(div0, file$3, 210, 12, 7097);
+				add_location(div0, file$3, 214, 12, 7203);
 				attr_dev(div1, "class", "step svelte-zoq0r5");
 				toggle_class(div1, "active", /*value*/ ctx[0] === /*i*/ ctx[24]);
-				add_location(div1, file$3, 209, 10, 7039);
+				add_location(div1, file$3, 213, 10, 7145);
 			},
 			m: function mount(target, anchor) {
 				insert_dev(target, div1, anchor);
@@ -46192,14 +46192,14 @@ var app = (function () {
 			block,
 			id: create_each_block$1.name,
 			type: "each",
-			source: "(209:8) {#each steps as text, i}",
+			source: "(213:8) {#each steps as text, i}",
 			ctx
 		});
 
 		return block;
 	}
 
-	// (208:6) <Scrolly bind:value>
+	// (212:6) <Scrolly bind:value>
 	function create_default_slot$1(ctx) {
 		let t;
 		let div;
@@ -46219,7 +46219,7 @@ var app = (function () {
 				t = space();
 				div = element("div");
 				attr_dev(div, "class", "spacer svelte-zoq0r5");
-				add_location(div, file$3, 213, 8, 7183);
+				add_location(div, file$3, 217, 8, 7289);
 			},
 			m: function mount(target, anchor) {
 				for (let i = 0; i < each_blocks.length; i += 1) {
@@ -46269,7 +46269,7 @@ var app = (function () {
 			block,
 			id: create_default_slot$1.name,
 			type: "slot",
-			source: "(208:6) <Scrolly bind:value>",
+			source: "(212:6) <Scrolly bind:value>",
 			ctx
 		});
 
@@ -46360,41 +46360,41 @@ var app = (function () {
 				br0 = element("br");
 				br1 = element("br");
 				attr_dev(h2, "class", "body-header");
-				add_location(h2, file$3, 200, 0, 6770);
+				add_location(h2, file$3, 204, 0, 6876);
 				attr_dev(p, "class", "body-text");
-				add_location(p, file$3, 201, 0, 6835);
+				add_location(p, file$3, 205, 0, 6941);
 				attr_dev(div0, "class", "steps-container svelte-zoq0r5");
-				add_location(div0, file$3, 206, 4, 6939);
+				add_location(div0, file$3, 210, 4, 7045);
 				attr_dev(button0, "class", "btn-na svelte-zoq0r5");
 				toggle_class(button0, "selected", !/*$selectedRegions*/ ctx[2].North_America);
-				add_location(button0, file$3, 219, 10, 7334);
+				add_location(button0, file$3, 223, 10, 7440);
 				attr_dev(button1, "class", "btn-eu svelte-zoq0r5");
 				toggle_class(button1, "selected", !/*$selectedRegions*/ ctx[2].Europe);
-				add_location(button1, file$3, 221, 10, 7502);
+				add_location(button1, file$3, 225, 10, 7608);
 				attr_dev(button2, "class", "btn-as svelte-zoq0r5");
 				toggle_class(button2, "selected", !/*$selectedRegions*/ ctx[2].Asia);
-				add_location(button2, file$3, 223, 10, 7649);
+				add_location(button2, file$3, 227, 10, 7755);
 				attr_dev(button3, "class", "btn-ot svelte-zoq0r5");
 				toggle_class(button3, "selected", !/*$selectedRegions*/ ctx[2].Other);
-				add_location(button3, file$3, 225, 10, 7790);
+				add_location(button3, file$3, 229, 10, 7896);
 				attr_dev(button4, "class", "btn-gp svelte-zoq0r5");
 				toggle_class(button4, "selected", !/*$selectedRegions*/ ctx[2].Gold_Price);
-				add_location(button4, file$3, 227, 10, 7934);
+				add_location(button4, file$3, 231, 10, 8040);
 				attr_dev(div1, "class", "buttons svelte-zoq0r5");
-				add_location(div1, file$3, 218, 8, 7302);
+				add_location(div1, file$3, 222, 8, 7408);
 				attr_dev(div2, "id", "chart");
 				attr_dev(div2, "class", "svelte-zoq0r5");
-				add_location(div2, file$3, 230, 6, 8104);
+				add_location(div2, file$3, 234, 6, 8210);
 				attr_dev(div3, "id", "wrapper");
 				attr_dev(div3, "class", "svelte-zoq0r5");
-				add_location(div3, file$3, 217, 6, 7275);
+				add_location(div3, file$3, 221, 6, 7381);
 				attr_dev(div4, "class", "charts-container svelte-zoq0r5");
-				add_location(div4, file$3, 216, 4, 7238);
+				add_location(div4, file$3, 220, 4, 7344);
 				attr_dev(div5, "class", "section-container svelte-zoq0r5");
-				add_location(div5, file$3, 205, 2, 6903);
-				add_location(br0, file$3, 235, 2, 8184);
-				add_location(br1, file$3, 235, 8, 8190);
-				add_location(section, file$3, 203, 0, 6863);
+				add_location(div5, file$3, 209, 2, 7009);
+				add_location(br0, file$3, 239, 2, 8290);
+				add_location(br1, file$3, 239, 8, 8296);
+				add_location(section, file$3, 207, 0, 6969);
 			},
 			l: function claim(nodes) {
 				throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -46516,6 +46516,7 @@ var app = (function () {
 		let { $$slots: slots = {}, $$scope } = $$props;
 		validate_slots('ScrollCenter', slots, []);
 		let value;
+		console.log("I am debugging ScrollCenter");
 
 		const target2event = {
 			0: () => {

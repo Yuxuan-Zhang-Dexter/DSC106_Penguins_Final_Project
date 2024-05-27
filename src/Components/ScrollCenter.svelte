@@ -18,6 +18,8 @@
     
   ];
 
+  console.log("I am debugging ScrollCenter");
+
   const target2event = {
     0: () => {
       select("#chart3").style("background-color", "darkorange");
@@ -152,6 +154,8 @@
             .attr("transform", `translate(${margin.left},${margin.top})`);
             
         const parseDate = d3.timeParse("%Y-%m-%d");
+
+        console.log("I am debugging ScrollCenter.svelte")
 
         try {
             data = await d3.csv('/assets/gold_data.csv', d => ({
