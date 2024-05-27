@@ -4,8 +4,13 @@ import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-css-only";
+import replace from "@rollup/plugin-replace";
+import html from '@rollup/plugin-html';
+import { readFileSync } from 'fs';
 
 const production = !process.env.ROLLUP_WATCH;
+const base = '/DSC106_Penguins_Final_Project'; // Update with your repository name
+
 
 function serve() {
   let server;
@@ -41,6 +46,10 @@ export default {
     file: "public/build/bundle.js",
   },
   plugins: [
+    replace({
+      'process.env.BASE_URL': JSON.stringify(base),
+      delimiters: ['', '']
+    }),
     svelte({
       compilerOptions: {
         // enable run-time checks when not in production
@@ -73,6 +82,14 @@ export default {
     // If we're building for production (npm run build
     // instead of npm run dev), minify
     production && terser(),
+
+    html({
+      fileName: 'index.html',
+      template: () => {
+        let template = readFileSync('src/template.html', 'utf8');
+        return template.replace(/%BASE_URL%/g, base);
+      }
+    })
   ],
   watch: {
     clearScreen: false,
