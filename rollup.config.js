@@ -81,5 +81,4 @@ export default {
   watch: {
     clearScreen: false,
   },
-  base: '/DSC106_Penguins_Final_Project/',
 };
