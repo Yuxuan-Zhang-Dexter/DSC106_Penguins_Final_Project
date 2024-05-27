@@ -24,6 +24,7 @@
     "katex": "^0.16.10",
     "sirv-cli": "^1.0.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "stickyfill": "^1.1.1-strict"
+    "stickyfill": "^1.1.1-strict",
+    "topojson-client": "^3.1.0"
   }
 }
