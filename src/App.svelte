@@ -8,12 +8,14 @@
   import Conclusion from "./Components/Conclusion.svelte";
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
+  import GoldMineMap from "./Components/GoldMineMap.svelte";
 </script>
 
 <Meta />
 <Title />
 <Intro />
 <TextAndMathEquations />
+<GoldMineMap/>
 <ScrollSide />
 <LineChart />
 <ScrollCenter />
