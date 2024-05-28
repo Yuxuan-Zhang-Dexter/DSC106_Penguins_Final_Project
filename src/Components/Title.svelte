@@ -1,26 +1,26 @@
 <section id="intro">
-  <h1 id="intro-hed">Title Of The Article</h1>
-  <h1 class="intro-sub">Subtitle of the article.</h1>
+  <h1 id="intro-hed">Why has the price of gold increased dramatically in recent years?
+</h1>
   <h3 id="intro__date">
-    <a href="https://twitter.com/" target="_blank">Author Name</a>, Month Year
+    <a target="_blank">Yuxuan Zhang, Xianzhe(Tony) Guo, Yiming Jia</a>, May 2024
   </h3>
 </section>
 
 <style>
   #intro {
-    max-width: 600px;
+    max-width: 900px;
     margin: 1rem auto;
     text-align: center;
     padding-top: 1rem;
   }
 
   #intro-hed {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 5px;
     margin-bottom: 0;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    max-width: 100%;
+    max-width: 90%;
     margin: auto;
     color: var(--squid-ink);
   }
