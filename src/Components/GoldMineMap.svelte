@@ -126,6 +126,14 @@
 
   function searchCountry(event) {
     const searchTerm = event.target.value.toLowerCase();
+    if (searchTerm === '') {
+      hideInfoBox();
+      svg.selectAll('path')
+        .attr('stroke-width', 0.5)
+        .attr('stroke', '#333')
+        .attr('fill', d => goldMiningData.has(d.properties.ISO_A3) ? colorScale2010(goldMiningData.get(d.properties.ISO_A3)) : "#3cd070");
+      return;
+    }
     const filteredCountries = countryNames.filter(name => name.toLowerCase().includes(searchTerm));
     showSuggestions(filteredCountries);
 
@@ -159,8 +167,6 @@
   function showInfoBox(country) {
     const infoBox = document.getElementById('info-box');
     infoBox.style.display = 'block';
-    infoBox.style.left = '10px';
-    infoBox.style.top = '10px';
     infoBox.innerHTML = `<strong>${country.properties.ADMIN}</strong><br>Gold Production: ${goldMiningData.has(country.properties.ISO_A3) ? goldMiningData.get(country.properties.ISO_A3) + ' tonnes' : 'No data'}`;
   }
 
@@ -382,5 +388,9 @@
     border: 1px solid #ccc;
     padding: 10px;
     z-index: 10;
+    width: 200px;
+    height: 100px;
+    bottom: 10px;
+    left: 10px;
   }
 </style>
