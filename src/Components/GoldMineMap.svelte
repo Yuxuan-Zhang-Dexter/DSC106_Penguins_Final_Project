@@ -82,24 +82,7 @@
       .append("g")
       .attr("transform", `translate(${margin.left},${margin.top})`);
 
-    const tooltip = d3.select("body").append("div")
-      .attr("class", "tooltip")
-      .style("position", "absolute")
-      .style("background-color", "white")
-      .style("border", "1px solid #ccc")
-      .style("padding", "10px")
-      .style("display", "none");
-
-    barChartSvg.selectAll("rect")
-      .on("mouseover", function(event, d) {
-        tooltip.style("display", "block");
-        tooltip.html(`<strong>${d.country}</strong><br>Gold Production: ${d.value} tonnes`)
-          .style("left", (event.pageX + 10) + "px")
-          .style("top", (event.pageY - 28) + "px");
-      })
-      .on("mouseout", function() {
-        tooltip.style("display", "none");
-      });
+    updateBarChart();
   }
 
   function updateBarChart() {
@@ -123,6 +106,14 @@
 
     barChartSvg.append("g").call(d3.axisLeft(y));
 
+    const tooltip = d3.select("body").append("div")
+      .attr("class", "tooltip")
+      .style("position", "absolute")
+      .style("background-color", "white")
+      .style("border", "1px solid #ccc")
+      .style("padding", "10px")
+      .style("display", "none");
+
     barChartSvg.selectAll("rect").data(data).enter().append("rect")
       .attr("x", xScale(0))
       .attr("y", d => y(d.country))
@@ -130,14 +121,13 @@
       .attr("height", y.bandwidth())
       .attr("fill", "#69b3a2")
       .on("mouseover", function(event, d) {
-        const tooltip = d3.select(".tooltip");
         tooltip.style("display", "block");
         tooltip.html(`<strong>${d.country}</strong><br>Gold Production: ${d.value} tonnes`)
           .style("left", (event.pageX + 10) + "px")
           .style("top", (event.pageY - 28) + "px");
       })
       .on("mouseout", function() {
-        d3.select(".tooltip").style("display", "none");
+        tooltip.style("display", "none");
       });
   }
 
