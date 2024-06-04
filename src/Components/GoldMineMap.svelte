@@ -10,8 +10,8 @@
   let countryNames = [];
   let goldMiningData = new Map();
   let error = '';
-  let width = 928;
-  let height = 600;
+  let width = 828; // Smaller width
+  let height = 500; // Smaller height
   let margin = { top: 100, bottom: 0, left: 0, right: 0 };
   let selectedYear = writable(2010);
   let colorScale2010;
@@ -350,8 +350,8 @@
 </div>
 <div id="world-map" style="position: relative; margin: auto; max-height: 75vh; width: 80%; margin: 2rem auto;">
   <div id="legend-container" style="position: absolute; bottom: 10px; right: 10px;"></div>
+  <div id="info-box"></div>
 </div>
-<div id="info-box"></div>
 
 <style>
   path {
@@ -390,7 +390,7 @@
     z-index: 10;
     width: 200px;
     height: 100px;
-    bottom: 10px;
-    left: 10px;
+    bottom: 10px; /* Adjusted to be at the bottom */
+    left: 10px; /* Adjusted to be on the left */
   }
 </style>
