@@ -395,7 +395,9 @@
 </div>
 
 <div id="bar-chart" style="display: none; position: relative; margin: auto; max-height: 75vh; width: 80%; margin: 2rem auto;"></div>
-
+<p class="body-text">
+  In conclusion, the total gold mine production increase slightly among major countries from 2010 to 2022. There is no big increase or decrease in gold mine production. Gold mine production is probably not the major component to determine the gold price.
+</p>
 <style>
   #controls {
     margin-bottom: 1rem;
