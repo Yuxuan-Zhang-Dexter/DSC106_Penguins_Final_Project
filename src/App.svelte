@@ -16,7 +16,7 @@
 <Intro />
 <TextAndMathEquations />
 <GoldMineMap/>
-<ScrollSide />
+<!-- <ScrollSide /> -->
 <LineChart />
 <ScrollCenter />
 <Conclusion />
