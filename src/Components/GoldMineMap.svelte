@@ -16,6 +16,7 @@
   let xScale; // Global variable for the x-axis scale
   let maxGoldProduction = 0; // Maximum gold production value across all years
   let colorScale2010;
+  let searchBarVisible = writable(true);
 
   onMount(async () => {
     try {
@@ -53,10 +54,7 @@
         updateMap();
       });
 
-      const searchBox = document.getElementById('country-search');
-      searchBox.addEventListener('input', searchCountry);
-      searchBox.addEventListener('focus', showSuggestionsContainer);
-      searchBox.addEventListener('blur', hideSuggestionsContainer);
+      attachSearchEventListeners();
     } catch (err) {
       error = 'Failed to load data. Please try again later.';
       console.error(err);
@@ -265,12 +263,30 @@
   function switchToMap() {
     document.getElementById('world-map').style.display = 'block';
     document.getElementById('bar-chart').style.display = 'none';
+    searchBarVisible.set(true);
+    // Wait for DOM update and then re-attach event listeners
+    setTimeout(() => {
+      attachSearchEventListeners();
+    }, 0);
   }
 
   function switchToBarChart() {
     document.getElementById('world-map').style.display = 'none';
     document.getElementById('bar-chart').style.display = 'block';
+    searchBarVisible.set(false);
     updateBarChart(); // Ensure bar chart is updated when switched to
+  }
+
+  function attachSearchEventListeners() {
+    const searchBox = document.getElementById('country-search');
+    if (searchBox) {
+      searchBox.removeEventListener('input', searchCountry);
+      searchBox.removeEventListener('focus', showSuggestionsContainer);
+      searchBox.removeEventListener('blur', hideSuggestionsContainer);
+      searchBox.addEventListener('input', searchCountry);
+      searchBox.addEventListener('focus', showSuggestionsContainer);
+      searchBox.addEventListener('blur', hideSuggestionsContainer);
+    }
   }
 
   function searchCountry(event) {
@@ -367,8 +383,10 @@
   <button on:click={switchToBarChart} style="background-color: #008CBA; color: white; padding: 10px 20px; margin-right: 10px; border: none; cursor: pointer;">World Gold Mining Bar Chart</button>
   <label for="year-slider" style="margin-right: 10px;">Year <span>{$selectedYear}</span> :</label>
   <input type="range" id="year-slider" min="2010" max="2022" bind:value={$selectedYear} style="width: 30%; margin-right: 10px;" autocomplete="off">
-  <input type="text" id="country-search" placeholder="Search country" style="width: 20%;" autocomplete="off">
-  <div id="suggestions-container" style="position: fixed; background: white; border: 1px solid #ccc; z-index: 10; max-height: 150px; overflow-y: auto; display: none;"></div>
+  {#if $searchBarVisible}
+    <input type="text" id="country-search" placeholder="Search country" style="width: 20%;" autocomplete="off">
+    <div id="suggestions-container" style="position: fixed; background: white; border: 1px solid #ccc; z-index: 10; max-height: 150px; overflow-y: auto; display: none;"></div>
+  {/if}
 </div>
 
 <div id="world-map" style="position: relative; margin: auto; max-height: 75vh; width: 80%; margin: 2rem auto;">
