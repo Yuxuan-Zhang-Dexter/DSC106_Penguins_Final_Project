@@ -389,7 +389,7 @@
   {/if}
 </div>
 
-<div id="world-map" style="position: relative; margin: auto; max-height: 75vh; width: 80%; margin: 2rem auto;">
+<div id="world-map" class="background" style="position: relative; margin: auto; max-height: 75vh; width: 80%; margin: 2rem auto;">
   <div id="legend-container" style="position: absolute; bottom: 10px; right: 10px;"></div>
   <div id="info-box" style="display: none; position: absolute; background: white; border: 1px solid #ccc; padding: 10px; z-index: 10; width: 200px; height: 100px; bottom: 10px; left: 10px;"></div>
 </div>
@@ -398,6 +398,7 @@
 <p class="body-text">
   In conclusion, the total gold mine production increase slightly among major countries from 2010 to 2022. There is no big increase or decrease in gold mine production. Gold mine production is probably not the major component to determine the gold price.
 </p>
+
 <style>
   #controls {
     margin-bottom: 1rem;
@@ -429,5 +430,12 @@
     border: 1px solid #ccc;
     padding: 10px;
     display: none;
+  }
+  .background {
+    background-image: url('../fig/gold_mine_image.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
   }
 </style>
