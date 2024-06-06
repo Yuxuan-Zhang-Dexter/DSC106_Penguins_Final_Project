@@ -1,7 +1,7 @@
 <section id="resources">
-  <h3 class="body-header">References + Open Source</h3>
+  <h3 class="body-header">References</h3>
   <p class="body-text">
-    This article is a product of the following resources:
+    This article references the following resources:
     <br /><br />
   </p>
   <div class="resource-list">
