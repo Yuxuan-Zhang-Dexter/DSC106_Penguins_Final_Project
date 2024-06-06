@@ -375,7 +375,7 @@
 
 <h1 class="body-header">Gold Mine Production</h1>
 <p class="body-text">
-  This visualization shows gold mine productions among the major countries from 2010 to 2022. We want to explore whether the increase or the decrease of mine production is the main factor influencing the gold price.
+  This visualization shows gold mine productions among the major countries from 2010 to 2022. We want to explore whether the increase or the decrease of mine production is the main factor influencing the gold price. In this visualization, we provide a choropleth world map and a bar chart to visualize the gold mine production. In the choropleth map, you can move the year slider to observe how much gold mine production change over years and you could also use search box to check the gold mine production of a specific country. In  the bar chart, you could compare the first ten countries with highest gold mine production and you could also move year slider to observe how much these top ten gold mine production change over time.
 </p>
 
 <div id="controls" style="margin: 1rem auto; width: 80%; text-align: left; display: flex; align-items: center;">
