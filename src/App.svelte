@@ -15,9 +15,7 @@
 <Title />
 <Intro />
 <TextAndMathEquations />
-<!-- intro gold price -->
 <ScrollSide />
-<!-- gold mine production -->
 <GoldMineMap/>
 <LineChart />
 <ScrollCenter />
