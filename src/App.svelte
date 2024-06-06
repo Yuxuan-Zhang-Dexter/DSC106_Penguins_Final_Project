@@ -15,8 +15,8 @@
 <Title />
 <Intro />
 <TextAndMathEquations />
-<GoldMineMap/>
 <ScrollSide />
+<GoldMineMap/>
 <LineChart />
 <ScrollCenter />
 <Conclusion />
