@@ -12,6 +12,10 @@
     <p class="resource-item">
       <a class="on-end" href="https://www.gold.org/">World Gold Council</a>
     </p>
+    <p class="resource-item">
+      <a class="on-end" href="https://github.com/zukahai/Gold-Miner-Game">Gold Miner Code</a>
+      <span>(zukahai)</span>
+    </p>
   </div>
 </section>
 
