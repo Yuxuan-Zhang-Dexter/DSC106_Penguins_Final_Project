@@ -16,6 +16,10 @@
       <a class="on-end" href="https://github.com/zukahai/Gold-Miner-Game">Gold Miner Code</a>
       <span>(zukahai)</span>
     </p>
+    <p class="resource-item">
+      <a class="on-end" href="https://observablehq.com/@d3">D3 Observable Gallery</a>
+      <span>(zukahai)</span>
+    </p>
   </div>
 </section>
 
