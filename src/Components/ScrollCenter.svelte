@@ -10,7 +10,11 @@
     `<h1 class='step-title'>Gold ETFs Holdings & Gold Prices by Month</h1>
     <br><br>
     <p>
-      Try clicking on the buttons on the left or playing with the grey bar below the chart!
+      Try single-click, double-click on the buttons on the left or 
+      playing with the grey bar below the chart!
+      What did you say? How to play with the grey bar? 
+      Click and drag the far left side of the grey bar or the far right side. 
+      You will see the chart changed. Now you can also drag the middle area of the bar around. 
     </p>`,
   ];
 
