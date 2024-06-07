@@ -381,7 +381,7 @@
 <div id="controls" style="margin: 1rem auto; width: 80%; text-align: left; display: flex; align-items: center;">
   <button on:click={switchToMap} style="background-color: #4CAF50; color: white; padding: 10px 20px; margin-right: 10px; border: none; cursor: pointer;">World Gold Mining Map</button>
   <button on:click={switchToBarChart} style="background-color: #008CBA; color: white; padding: 10px 20px; margin-right: 10px; border: none; cursor: pointer;">World Gold Mining Bar Chart</button>
-  <label for="year-slider" style="margin-right: 10px;">Year <span>{$selectedYear}</span> :</label>
+  <label for="year-slider" style="margin-right: 10px;">Year <span>{$selectedYear}</span></label>
   <input type="range" id="year-slider" min="2010" max="2022" bind:value={$selectedYear} style="width: 30%; margin-right: 10px;" autocomplete="off">
   {#if $searchBarVisible}
     <input type="text" id="country-search" placeholder="Search country" style="width: 20%;" autocomplete="off">
