@@ -8,8 +8,6 @@
   <p class="body-header">
     Want to dig up some gold before viewing the project? Click <a href="#gameButton">here</a>.
   </p>
-  
-  </p>
 </section>
 
 <style>
