@@ -18,7 +18,7 @@
     </p>
     <p class="resource-item">
       <a class="on-end" href="https://observablehq.com/@d3">D3 Observable Gallery</a>
-      <span>(zukahai)</span>
+      <span></span>
     </p>
   </div>
 </section>
