@@ -9,6 +9,7 @@
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
   import GoldMineMap from "./Components/GoldMineMap.svelte";
+  import GoldMinerGame from "./Components/GoldMinerGame.svelte";
 </script>
 
 <Meta />
@@ -21,3 +22,4 @@
 <ScrollCenter />
 <Conclusion />
 <Resources />
+<GoldMinerGame />
