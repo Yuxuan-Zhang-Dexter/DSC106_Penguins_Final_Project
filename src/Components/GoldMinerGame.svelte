@@ -453,12 +453,22 @@
     #gameButton:hover {
       background-color: #45a049;
     }
+
+    #backToReading {
+        color: red;
+        margin-left: 400px;
+    }
   </style>
   
-  <div>
+<div>
     <canvas></canvas>
     <button id="gameButton" on:click={handleButtonClick}>
       {gameState === 'stop' ? 'Start Game' : gameState === 'running' ? 'Stop' : 'Resume'}
     </button>
-  </div>
+    <section id="backToReading">
+        <p class="body-text">
+          Bored? Back to <a href="#reading">reading</a>.
+        </p>
+    </section>
+</div>
   
